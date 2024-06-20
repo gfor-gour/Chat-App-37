@@ -169,8 +169,8 @@ public class Chat_Body extends javax.swing.JPanel {
         verticalBar.addAdjustmentListener(downScroller);
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+
     private javax.swing.JPanel body;
     private javax.swing.JScrollPane sp;
-    // End of variables declaration//GEN-END:variables
+
 }

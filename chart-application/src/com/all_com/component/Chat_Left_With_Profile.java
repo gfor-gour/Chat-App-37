@@ -82,9 +82,8 @@ public class Chat_Left_With_Profile extends javax.swing.JLayeredPane {
     }// </editor-fold>//GEN-END:initComponents
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+
     private com.raven.swing.ImageAvatar IaImage;
     private javax.swing.JLayeredPane jLayeredPane1;
     private com.raven.component.Chat_Item txt;
-    // End of variables declaration//GEN-END:variables
 }

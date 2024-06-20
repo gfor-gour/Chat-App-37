@@ -5,10 +5,6 @@
  */
 package com.raven.form;
 
-/**
- *
- * @author RAVEN
- */
 public class Menu_Right extends javax.swing.JPanel {
 
     /**

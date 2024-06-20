@@ -74,15 +74,15 @@ public class VIew_Image extends javax.swing.JComponent {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void picMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_picMousePressed
+    private void picMousePressed(java.awt.event.MouseEvent evt) {
         if (SwingUtilities.isLeftMouseButton(evt)) {
             setVisible(false);
         }
-    }//GEN-LAST:event_picMousePressed
+    }
 
-    private void cmdSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdSaveActionPerformed
+    private void cmdSaveActionPerformed(java.awt.event.ActionEvent evt) {
         PublicEvent.getInstance().getEventImageView().saveImage(image);
-    }//GEN-LAST:event_cmdSaveActionPerformed
+    }
 
     @Override
     protected void paintComponent(Graphics grphcs) {
@@ -93,8 +93,6 @@ public class VIew_Image extends javax.swing.JComponent {
     }
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cmdSave;
     private com.raven.swing.PictureBox pic;
-    // End of variables declaration//GEN-END:variables
 }

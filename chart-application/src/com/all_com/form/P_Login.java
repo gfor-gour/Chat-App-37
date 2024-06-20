@@ -87,16 +87,16 @@ public class P_Login extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cmdRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdRegisterActionPerformed
+    private void cmdRegisterActionPerformed(java.awt.event.ActionEvent evt) {
         PublicEvent.getInstance().getEventLogin().goRegister();
-    }//GEN-LAST:event_cmdRegisterActionPerformed
+    }
 
-    private void cmdLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdLoginActionPerformed
+    private void cmdLoginActionPerformed(java.awt.event.ActionEvent evt) {
         PublicEvent.getInstance().getEventLogin().login(new Model_Login(txtUser.getText(), String.valueOf(txtPass.getPassword())));
-    }//GEN-LAST:event_cmdLoginActionPerformed
+    }
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+
     private javax.swing.JButton cmdLogin;
     private javax.swing.JButton cmdRegister;
     private javax.swing.JLabel jLabel1;
@@ -104,5 +104,5 @@ public class P_Login extends javax.swing.JPanel {
     private javax.swing.JLabel lbTitle;
     private javax.swing.JPasswordField txtPass;
     private javax.swing.JTextField txtUser;
-    // End of variables declaration//GEN-END:variables
+
 }
