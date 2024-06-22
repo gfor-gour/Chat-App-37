@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ChatApp_37.iml" filepath="$PROJECT_DIR$/.idea/ChatApp_37.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SocketIO_ChatApp.iml" filepath="$PROJECT_DIR$/.idea/SocketIO_ChatApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/chart-application/chart-application.iml" filepath="$PROJECT_DIR$/chart-application/chart-application.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chart-application/src/chart-application1.iml" filepath="$PROJECT_DIR$/chart-application/src/chart-application1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/server.iml" filepath="$PROJECT_DIR$/server/server.iml" />
     </modules>
   </component>
 </project>
