@@ -37,7 +37,7 @@ class UserServiceTest {
         
         ServiceResponse response = userService.register(req);
         
-        assertTrue(response.isSuccess());
+        assertTrue(response.isAction());
         UserAccountDto user = (UserAccountDto) response.getData();
         assertEquals(1, user.getUserID());
         assertEquals("ValidUser", user.getUserName());
@@ -55,7 +55,7 @@ class UserServiceTest {
         
         ServiceResponse response = userService.register(req);
         
-        assertFalse(response.isSuccess());
+        assertFalse(response.isAction());
         assertEquals("User Already Exists", response.getMessage());
         
         verify(userRepository, never()).insertUser(anyString(), anyString());

@@ -1,8 +1,6 @@
 package com.raven.server.repository;
 
 import com.raven.shared.dto.UserAccountDto;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -14,7 +12,6 @@ import java.util.List;
 import java.util.Optional;
 
 public class UserRepository {
-    private static final Logger log = LoggerFactory.getLogger(UserRepository.class);
     private final DataSource dataSource;
 
     public UserRepository(DataSource dataSource) {

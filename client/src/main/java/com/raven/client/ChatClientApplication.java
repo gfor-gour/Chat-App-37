@@ -19,7 +19,8 @@ public class ChatClientApplication {
         SwingUtilities.invokeLater(() -> {
             // Establish connection
             ConnectionManager connectionManager = ConnectionManager.getInstance();
-            connectionManager.connect("localhost", 9999);
+            connectionManager.init("localhost", 9999);
+            connectionManager.connect();
             
             // Launch main frame
             MainFrame frame = new MainFrame();

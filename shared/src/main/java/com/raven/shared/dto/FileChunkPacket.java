@@ -2,8 +2,6 @@ package com.raven.shared.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.Arrays;
-
 public class FileChunkPacket {
     @JsonProperty("fileID")
     private int fileID;

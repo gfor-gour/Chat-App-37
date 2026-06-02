@@ -94,7 +94,6 @@ public class FileTransferService {
         private final File file;
         private final SendMessageRequest message;
         private final EventFileSender event;
-        private final String fileExtension;
         private final long fileSize;
         private RandomAccessFile randomAccessFile;
         private int fileID;
@@ -105,7 +104,6 @@ public class FileTransferService {
             this.event = event;
             this.randomAccessFile = new RandomAccessFile(file, "r");
             this.fileSize = randomAccessFile.length();
-            this.fileExtension = getExtensions(file.getName());
         }
 
         public File getFile() {
@@ -242,11 +240,6 @@ public class FileTransferService {
                 }
             } catch (Exception ignored) {
             }
-        }
-
-        private String getExtensions(String fileName) {
-            int lastDot = fileName.lastIndexOf('.');
-            return lastDot >= 0 ? fileName.substring(lastDot) : "";
         }
     }
 

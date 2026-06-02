@@ -1,0 +1,12 @@
+com\raven\shared\dto\ReceiveMessageResponse.class
+com\raven\shared\dto\UserAccountDto.class
+com\raven\shared\dto\RegisterRequest.class
+com\raven\shared\dto\ImagePreviewData.class
+com\raven\shared\dto\ServiceResponse.class
+com\raven\shared\enums\MessageType.class
+com\raven\shared\dto\FileChunkPacket.class
+com\raven\shared\dto\LoginRequest.class
+com\raven\shared\dto\SendMessageRequest.class
+com\raven\shared\validation\InputValidator.class
+com\raven\shared\dto\FileMetadata.class
+com\raven\shared\dto\FileDownloadRequest.class

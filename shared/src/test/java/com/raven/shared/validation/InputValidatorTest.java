@@ -28,7 +28,7 @@ class InputValidatorTest {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             InputValidator.sanitizeFileExtension(".exe");
         });
-        assertTrue(exception.getMessage().contains("File extension not allowed"));
+        assertTrue(exception.getMessage().contains("Unsupported file extension"));
     }
 
     @Test

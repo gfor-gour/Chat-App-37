@@ -1,6 +1,5 @@
 package com.raven.shared.validation;
 
-import java.io.File;
 import java.util.Set;
 
 public class InputValidator {
@@ -18,11 +17,17 @@ public class InputValidator {
         // Normalize: strip whitespace, convert to lower case
         String clean = extension.trim().toLowerCase();
         
-        // Remove any path traversal components (e.g. ../, ..\)
-        clean = clean.replaceAll("[\\\\/\\.\\.]", "");
+        // Extract the actual extension if a path or filename is passed
+        int dot = clean.lastIndexOf('.');
+        if (dot >= 0) {
+            clean = clean.substring(dot);
+        }
         
-        // Restore leading dot
-        if (!clean.isEmpty()) {
+        // Remove any path traversal/separators (e.g. /, \)
+        clean = clean.replaceAll("[\\\\/]", "");
+        
+        // Restore leading dot if missing
+        if (!clean.startsWith(".") && !clean.isEmpty()) {
             clean = "." + clean;
         }
 

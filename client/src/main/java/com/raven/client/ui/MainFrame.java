@@ -18,7 +18,6 @@ import com.raven.shared.dto.ReceiveMessageResponse;
 import com.raven.shared.dto.SendMessageRequest;
 import com.raven.shared.dto.UserAccountDto;
 import com.raven.shared.enums.MessageType;
-import com.raven.client.util.SwingUtils;
 
 import javax.swing.*;
 import java.awt.*;
@@ -115,7 +114,7 @@ public class MainFrame extends JFrame {
             UserAccountDto current = chatPanel.getCurrentUser();
             if (current != null) {
                 SendMessageRequest req = new SendMessageRequest();
-                req.setToUserId(current.getUserID());
+                req.setToUserID(current.getUserID());
                 req.setText(text);
                 req.setMessageType(MessageType.TEXT);
                 
@@ -161,7 +160,7 @@ public class MainFrame extends JFrame {
             }
             @Override
             public void receiveMessage(ReceiveMessageResponse data) {
-                if (chatPanel.getCurrentUser() != null && chatPanel.getCurrentUser().getUserID() == data.getFromUserId()) {
+                if (chatPanel.getCurrentUser() != null && chatPanel.getCurrentUser().getUserID() == data.getFromUserID()) {
                     chatPanel.getBody().addMessage(data.getText(), MessageBubble.Alignment.LEFT);
                 } else {
                     toast.showToast("New message received", ToastNotification.Type.SUCCESS);

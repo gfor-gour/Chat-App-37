@@ -1,0 +1,8 @@
+2026-06-02 02:44:58.342 [main] INFO  c.raven.server.service.UserService - Successful login for user id=1, name='ValidUser'
+2026-06-02 02:44:58.878 [main] INFO  c.raven.server.service.UserService - User registered successfully: id=1, name='ValidUser'
+2026-06-02 02:44:59.639 [main] WARN  c.raven.server.service.UserService - Login failed: incorrect password for user 'ValidUser'
+2026-06-02 02:44:59.646 [main] WARN  c.raven.server.service.UserService - Registration failed: username 'ExistingUser' already exists
+2026-06-02 02:47:02.857 [main] INFO  c.raven.server.service.UserService - Successful login for user id=1, name='ValidUser'
+2026-06-02 02:47:03.294 [main] INFO  c.raven.server.service.UserService - User registered successfully: id=1, name='ValidUser'
+2026-06-02 02:47:04.027 [main] WARN  c.raven.server.service.UserService - Login failed: incorrect password for user 'ValidUser'
+2026-06-02 02:47:04.036 [main] WARN  c.raven.server.service.UserService - Registration failed: username 'ExistingUser' already exists
