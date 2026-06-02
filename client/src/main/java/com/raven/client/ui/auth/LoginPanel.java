@@ -46,7 +46,7 @@ public class LoginPanel extends JPanel {
         lblError.setFont(AppTheme.FONT_SMALL);
         lblError.setVisible(false);
         
-        add(lblTitle, "wrap, pady 0 20");
+        add(lblTitle, "wrap, gapy 0 20");
         add(new JLabel("Username", SwingConstants.LEFT), "wrap, gapy 10");
         add(txtUser, "height 35!");
         add(new JLabel("Password", SwingConstants.LEFT), "wrap, gapy 10");

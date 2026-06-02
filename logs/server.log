@@ -1,0 +1,150 @@
+2026-06-02 22:40:37.670 [AWT-EventQueue-0] INFO  com.raven.main.Main - Bootstrapping Server components...
+2026-06-02 22:40:37.674 [AWT-EventQueue-0] INFO  com.raven.server.config.AppConfig - Successfully loaded application.properties from resources.
+2026-06-02 22:40:37.687 [AWT-EventQueue-0] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-02 22:40:38.040 [AWT-EventQueue-0] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31c99b37
+2026-06-02 22:40:38.043 [AWT-EventQueue-0] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-02 22:40:38.047 [AWT-EventQueue-0] INFO  com.raven.main.Main - HikariCP Connection Pool Initialized.
+2026-06-02 22:40:38.053 [AWT-EventQueue-0] INFO  c.raven.server.service.FileService - Created file storage directory at: server_data/
+2026-06-02 22:40:38.375 [AWT-EventQueue-0] INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2026-06-02 22:40:38.750 [nioEventLoopGroup-2-1] INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 9999
+2026-06-02 22:40:38.752 [AWT-EventQueue-0] INFO  com.raven.main.Main - Socket.IO Chat Server started on port 9999
+2026-06-02 22:40:53.576 [nioEventLoopGroup-3-1] INFO  c.r.s.handler.ConnectionEventHandler - Client connected: sessionId=ef093cfe-4f27-482f-b74d-1832f238b5a8, address=/127.0.0.1:9446
+2026-06-02 22:41:24.803 [nioEventLoopGroup-3-3] ERROR c.c.s.l.DefaultExceptionListener - Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-06-02 22:41:24.810 [nioEventLoopGroup-3-3] INFO  c.r.s.handler.ConnectionEventHandler - Client disconnected: sessionId=ef093cfe-4f27-482f-b74d-1832f238b5a8
+2026-06-02 22:41:38.265 [nioEventLoopGroup-3-6] INFO  c.r.s.handler.ConnectionEventHandler - Client connected: sessionId=b6bd719f-2eae-48b7-bb82-9d54fe7e7dbb, address=/127.0.0.1:13109
+2026-06-02 22:42:38.115 [nioEventLoopGroup-3-9] INFO  c.r.server.handler.AuthEventHandler - Registration request received: user='Gour 111'
+2026-06-02 22:42:38.116 [nioEventLoopGroup-3-9] WARN  c.raven.server.service.UserService - Registration validation failed for user 'Gour 111': Username can only contain letters, numbers, hyphens, and underscores
+2026-06-02 22:42:50.512 [nioEventLoopGroup-3-9] INFO  c.r.server.handler.AuthEventHandler - Registration request received: user='Gour_test'
+2026-06-02 22:42:50.931 [nioEventLoopGroup-3-9] INFO  c.raven.server.service.UserService - User registered successfully: id=101, name='Gour_test'
+2026-06-02 22:42:50.938 [nioEventLoopGroup-3-9] INFO  c.r.server.service.SessionManager - Registered session: user=101, totalActiveSessions=1
+2026-06-02 22:43:09.982 [nioEventLoopGroup-3-9] INFO  c.r.s.handler.MessageEventHandler - Message event: from=0, to=38, type=TEXT
+2026-06-02 22:43:09.982 [nioEventLoopGroup-3-9] WARN  c.r.server.service.SessionManager - Attempted to send to offline user=38
+2026-06-02 22:43:22.250 [nioEventLoopGroup-3-9] INFO  c.r.s.handler.MessageEventHandler - Message event: from=0, to=37, type=TEXT
+2026-06-02 22:43:22.251 [nioEventLoopGroup-3-9] WARN  c.r.server.service.SessionManager - Attempted to send to offline user=37
+2026-06-02 22:56:58.759 [nioEventLoopGroup-3-11] INFO  c.r.s.handler.ConnectionEventHandler - Client connected: sessionId=68d46885-aec8-4d73-b6ca-366876d66a03, address=/127.0.0.1:9426
+2026-06-02 22:57:26.100 [nioEventLoopGroup-3-13] INFO  c.r.server.handler.AuthEventHandler - Registration request received: user='gupal_test'
+2026-06-02 22:57:26.413 [nioEventLoopGroup-3-13] INFO  c.raven.server.service.UserService - User registered successfully: id=102, name='gupal_test'
+2026-06-02 22:57:26.416 [nioEventLoopGroup-3-13] INFO  c.r.server.service.SessionManager - Registered session: user=102, totalActiveSessions=1
+2026-06-02 22:57:33.080 [nioEventLoopGroup-3-13] INFO  c.r.s.handler.MessageEventHandler - Message event: from=0, to=101, type=TEXT
+2026-06-02 22:57:48.356 [nioEventLoopGroup-3-13] INFO  c.r.s.handler.MessageEventHandler - Message event: from=0, to=101, type=TEXT
+2026-06-02 22:58:13.857 [nioEventLoopGroup-3-9] INFO  c.r.s.handler.MessageEventHandler - Message event: from=0, to=102, type=TEXT
+2026-06-02 22:58:28.592 [nioEventLoopGroup-3-9] INFO  c.r.s.handler.MessageEventHandler - Message event: from=0, to=102, type=TEXT
+2026-06-02 23:06:00.837 [nioEventLoopGroup-3-9] ERROR c.c.s.l.DefaultExceptionListener - Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-06-02 23:06:00.842 [nioEventLoopGroup-3-9] INFO  c.r.s.handler.ConnectionEventHandler - Client disconnected: sessionId=b6bd719f-2eae-48b7-bb82-9d54fe7e7dbb
+2026-06-02 23:06:00.842 [nioEventLoopGroup-3-9] INFO  c.r.server.service.SessionManager - Deregistered session: user=101, remainingSessions=0
+2026-06-02 23:06:00.845 [nioEventLoopGroup-3-9] INFO  c.r.s.handler.ConnectionEventHandler - User id=101 is now completely OFFLINE.
+2026-06-02 23:08:29.131 [AWT-EventQueue-0] INFO  com.raven.main.Main - Bootstrapping Server components...
+2026-06-02 23:08:29.134 [AWT-EventQueue-0] INFO  com.raven.server.config.AppConfig - Successfully loaded application.properties from resources.
+2026-06-02 23:08:29.148 [AWT-EventQueue-0] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-02 23:08:29.729 [AWT-EventQueue-0] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7a4621ef
+2026-06-02 23:08:29.734 [AWT-EventQueue-0] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-02 23:08:29.739 [AWT-EventQueue-0] INFO  com.raven.main.Main - HikariCP Connection Pool Initialized.
+2026-06-02 23:08:30.222 [AWT-EventQueue-0] INFO  c.c.socketio.SocketIOServer - Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2026-06-02 23:08:30.730 [nioEventLoopGroup-2-1] INFO  c.c.socketio.SocketIOServer - SocketIO server started at port: 9999
+2026-06-02 23:08:30.732 [AWT-EventQueue-0] INFO  com.raven.main.Main - Socket.IO Chat Server started on port 9999
+2026-06-02 23:08:32.837 [nioEventLoopGroup-3-1] INFO  c.r.s.handler.ConnectionEventHandler - Client connected: sessionId=debbb233-39be-41ad-baeb-e5c692785749, address=/127.0.0.1:11061
+2026-06-02 23:09:46.667 [nioEventLoopGroup-3-6] INFO  c.r.s.handler.ConnectionEventHandler - Client connected: sessionId=7980c8eb-f955-4372-855e-8152e01242f2, address=/127.0.0.1:5287
+2026-06-02 23:10:21.465 [nioEventLoopGroup-3-11] INFO  c.r.s.handler.ConnectionEventHandler - Client connected: sessionId=435b3cc5-702c-4dcd-813b-a8b83a3476fa, address=/127.0.0.1:7240
+2026-06-02 23:10:57.568 [nioEventLoopGroup-3-3] ERROR c.c.s.l.DefaultExceptionListener - Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-06-02 23:10:57.573 [nioEventLoopGroup-3-3] INFO  c.r.s.handler.ConnectionEventHandler - Client disconnected: sessionId=debbb233-39be-41ad-baeb-e5c692785749
+2026-06-02 23:11:12.927 [nioEventLoopGroup-3-8] INFO  c.r.server.handler.AuthEventHandler - Login request received: user='Gour_test'
+2026-06-02 23:11:13.334 [nioEventLoopGroup-3-8] INFO  c.raven.server.service.UserService - Successful login for user id=101, name='Gour_test'
+2026-06-02 23:11:13.340 [nioEventLoopGroup-3-8] INFO  c.r.server.service.SessionManager - Registered session: user=101, totalActiveSessions=1
+2026-06-02 23:11:29.718 [nioEventLoopGroup-3-13] INFO  c.r.server.handler.AuthEventHandler - Login request received: user='gupal_test'
+2026-06-02 23:11:29.973 [nioEventLoopGroup-3-13] INFO  c.raven.server.service.UserService - Successful login for user id=102, name='gupal_test'
+2026-06-02 23:11:29.975 [nioEventLoopGroup-3-13] INFO  c.r.server.service.SessionManager - Registered session: user=102, totalActiveSessions=1
+2026-06-02 23:11:35.236 [nioEventLoopGroup-3-13] INFO  c.r.s.handler.MessageEventHandler - Message event: from=102, to=101, type=TEXT
+2026-06-02 23:11:44.520 [nioEventLoopGroup-3-8] INFO  c.r.s.handler.MessageEventHandler - Message event: from=101, to=102, type=TEXT
+2026-06-02 23:11:53.354 [nioEventLoopGroup-3-8] ERROR c.c.s.l.DefaultExceptionListener - Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-06-02 23:11:53.354 [nioEventLoopGroup-3-8] INFO  c.r.s.handler.ConnectionEventHandler - Client disconnected: sessionId=7980c8eb-f955-4372-855e-8152e01242f2
+2026-06-02 23:11:53.354 [nioEventLoopGroup-3-8] INFO  c.r.server.service.SessionManager - Deregistered session: user=101, remainingSessions=0
+2026-06-02 23:11:53.355 [nioEventLoopGroup-3-8] INFO  c.r.s.handler.ConnectionEventHandler - User id=101 is now completely OFFLINE.
+2026-06-02 23:11:54.899 [nioEventLoopGroup-3-13] ERROR c.c.s.l.DefaultExceptionListener - Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-06-02 23:11:54.900 [nioEventLoopGroup-3-13] INFO  c.r.s.handler.ConnectionEventHandler - Client disconnected: sessionId=435b3cc5-702c-4dcd-813b-a8b83a3476fa
+2026-06-02 23:11:54.900 [nioEventLoopGroup-3-13] INFO  c.r.server.service.SessionManager - Deregistered session: user=102, remainingSessions=0
+2026-06-02 23:11:54.900 [nioEventLoopGroup-3-13] INFO  c.r.s.handler.ConnectionEventHandler - User id=102 is now completely OFFLINE.
+2026-06-02 23:11:56.707 [AWT-EventQueue-0] INFO  com.raven.main.Main - Initiating graceful shutdown...
+2026-06-02 23:12:00.807 [AWT-EventQueue-0] INFO  c.c.socketio.SocketIOServer - SocketIO server stopped
+2026-06-02 23:12:00.807 [AWT-EventQueue-0] INFO  com.raven.main.Main - Socket.IO Server stopped.
+2026-06-02 23:12:00.807 [AWT-EventQueue-0] INFO  c.raven.server.service.FileService - Shutting down FileService and evicting all active file handlers...
+2026-06-02 23:12:00.854 [AWT-EventQueue-0] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-02 23:12:00.865 [AWT-EventQueue-0] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-02 23:12:00.865 [AWT-EventQueue-0] INFO  com.raven.main.Main - HikariCP Data Source closed.
+2026-06-02 23:12:00.866 [AWT-EventQueue-0] INFO  com.raven.main.Main - Shutdown completed successfully.
+2026-06-02 23:12:00.872 [shutdown-hook] INFO  com.raven.main.Main - Initiating graceful shutdown...
+2026-06-02 23:12:00.873 [shutdown-hook] INFO  com.raven.main.Main - Shutdown completed successfully.

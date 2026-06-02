@@ -114,6 +114,7 @@ public class MainFrame extends JFrame {
             UserAccountDto current = chatPanel.getCurrentUser();
             if (current != null) {
                 SendMessageRequest req = new SendMessageRequest();
+                req.setFromUserID(AuthService.getInstance().getCurrentUser().getUserID());
                 req.setToUserID(current.getUserID());
                 req.setText(text);
                 req.setMessageType(MessageType.TEXT);
