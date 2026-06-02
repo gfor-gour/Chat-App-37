@@ -93,43 +93,6 @@ CREATE TABLE user_account (
 
 ---
 
-## 🛠️ Debugging Case Study: The Messaging Bug
-
-### The Issue
-A critical bug existed where users were unable to view incoming messages. While they would receive top-corner toast notifications and could see online users, no messages appeared in the chat bubbles. Furthermore, the sender's own sent messages would disappear if they switched chat screens in the sidebar.
-
-### Root Cause Analysis
-1.  **Missing Field Initialization:** On the client-side UI, when a user typed a message and sent it, a `SendMessageRequest` DTO was populated with the receiver's `userID`, the message content, and type. However, the client did not set the `fromUserID` field.
-2.  **Zero-Value Propagation:** Due to this, the `fromUserID` defaulted to `0` in the payload. The Socket.IO server received this DTO, processed it, and dispatched a `ReceiveMessageResponse` to the recipient with `fromUserID = 0`.
-3.  **Validation Failure:** Upon receiving the event, the recipient client inspected the message to decide which chat panel to append it to:
-    ```java
-    if (chatPanel.getCurrentUser() != null && chatPanel.getCurrentUser().getUserID() == data.getFromUserID()) {
-        chatPanel.getBody().addMessage(data.getText(), MessageBubble.Alignment.LEFT);
-    } else {
-        toast.showToast("New message received", ToastNotification.Type.SUCCESS);
-    }
-    ```
-    Since `data.getFromUserID()` was always `0`, it never matched the actual sender's User ID (e.g., `101`). Consequently, the condition evaluated to `false`, executing the `else` block which triggered the success toast notification but skipped rendering the message in the chat body.
-4.  **UI Switch Clearance:** In Java Swing, to swap chat windows, `ChatPanel` triggers `bodyPanel.clear()` when a new user is selected. Since client-side caching of conversation threads was not implemented, clearing the body caused all temporary message components to flush.
-
-### The Fix
-The client code was updated inside `MainFrame.java` to fetch the current authenticated client ID from the `AuthService` state singleton and map it explicitly before transmission:
-
-```diff
-         chatPanel = new ChatPanel(text -> {
-             UserAccountDto current = chatPanel.getCurrentUser();
-             if (current != null) {
-                 SendMessageRequest req = new SendMessageRequest();
-+                req.setFromUserID(AuthService.getInstance().getCurrentUser().getUserID());
-                 req.setToUserID(current.getUserID());
-                 req.setText(text);
-                 req.setMessageType(MessageType.TEXT);
-```
-
-Once applied, the socket payload delivered the authentic sender identity, allowing correct evaluation on the receiver's end and making the chat interface fully functional.
-
----
-
 ## 🚀 Getting Started
 
 ### Prerequisites
